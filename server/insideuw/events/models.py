@@ -10,8 +10,7 @@ class Event(models.Model):
     city = models.CharField('Miasto', max_length=100)
     date = models.DateTimeField('Data')
     address = models.CharField('Miejsce', max_length=100)
-    image = models.ImageField('Zdjęcie', upload_to='images')
-    last_edit_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ImageField('Zdjęcie', upload_to='media')
     url = models.URLField('Link do zapisów', max_length=100, blank=True, default='')
 
     objects = EventManager()
